@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QalamData — Sovereign UAE Property Intelligence</title>
+  <meta name="description" content="Understand any UAE property parcel in seconds, with AI that runs on UAE soil. Real Dubai Land Department + Abu Dhabi open data, analysed by an on-premise sovereign AI." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="icon" type="image/png" href="assets/logo-mark.png" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="brand.css" /><!-- Al Qalam AI branding layer -->
+  <meta name="theme-color" content="#0B3D2E" />
+</head>
+<body>
+  <!-- Top bar -->
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo" aria-hidden="true">
+        <svg viewBox="0 0 48 48" width="34" height="34"><defs><linearGradient id="g" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#E7C66B"/><stop offset="1" stop-color="#0FB5A6"/></linearGradient></defs><path fill="url(#g)" d="M24 2l5.5 11.6L42 16l-9 8.6L35 38l-11-6-11 6 2-13.4L6 16l12.5-2.4z"/></svg>
+      </div>
+      <div class="brandtext">
+        <strong>QalamData</strong>
+        <span>by Al Qalam AI Solutions</span>
+      </div>
+    </div>
+    <div class="topbar-right">
+      <div id="aiStatus" class="chip chip-muted" title="Sovereign AI status">
+        <span class="dot"></span><span id="aiStatusText">Checking sovereign AI…</span>
+      </div>
+      <button id="settingsBtn" class="iconbtn" title="Settings" aria-label="Settings">⚙</button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-copy">
+      <div class="kicker">🇦🇪 Sovereign UAE PropTech · Hub71 Abu Dhabi AI Challenge</div>
+      <h1>Understand any UAE property in seconds —<br><span class="accent">with AI that never leaves UAE soil.</span></h1>
+      <p class="lede">QalamData turns <strong id="recordCount">1,000,000+</strong> official land &amp; building records into plain-English answers. The AI analyst runs <strong>on-premise on a UAE machine</strong> — your data is never sent to a foreign cloud.</p>
+      <div class="emirate-switch" role="tablist" aria-label="Select emirate">
+        <button class="em-btn active" data-emirate="dubai" role="tab">Dubai <span class="tag tag-live">LIVE</span></button>
+        <button class="em-btn" data-emirate="abudhabi" role="tab">Abu Dhabi <span class="tag tag-preview">PREVIEW</span></button>
+      </div>
+      <div class="source-line" id="sourceLine">Source: Dubai Land Department (Dubai Pulse open data)</div>
+    </div>
+  </section>
+
+  <main class="container">
+    <!-- KPI row -->
+    <section class="kpis" id="kpis" aria-label="Market indicators"></section>
+
+    <!-- Market mix -->
+    <section class="grid-2">
+      <div class="card">
+        <h2>Property type mix <span class="hint">what is built here</span></h2>
+        <div id="propertyMix" class="barlist"></div>
+      </div>
+      <div class="card">
+        <h2>Ownership &amp; land profile <span class="hint">how it is held</span></h2>
+        <div id="ownershipMix" class="barlist"></div>
+      </div>
+    </section>
+
+    <!-- Explorer -->
+    <section class="grid-2">
+      <div class="card">
+        <h2>1 · Explore an area <span class="hint">pick or search</span></h2>
+        <input id="areaSearch" class="input" type="text" placeholder="Search area, e.g. Palm Jumeirah, Jumeirah Park…" autocomplete="off" />
+        <div id="areaResults" class="result-list"></div>
+        <div id="areaCard" class="detail"></div>
+      </div>
+
+      <div class="card">
+        <h2>2 · Look up a parcel <span class="hint">sample parcels</span></h2>
+        <input id="parcelSearch" class="input" type="text" placeholder="Search parcel id or area…" autocomplete="off" />
+        <div id="parcelResults" class="result-list"></div>
+        <div id="parcelCard" class="detail"></div>
+      </div>
+    </section>
+
+    <!-- AI analyst -->
+    <section class="card ai-card">
+      <div class="ai-head">
+        <h2>3 · AI Data Analyst</h2>
+        <div id="aiBadge" class="ai-badge hidden"></div>
+      </div>
+      <p class="ai-sub">Select an area or parcel above, then ask the sovereign AI to interpret the numbers and advise.</p>
+      <div class="ai-actions">
+        <button id="analyzeBtn" class="btn btn-primary" disabled>✦ Analyze with Sovereign AI</button>
+        <select id="modelSelect" class="select" title="Model">
+          <optgroup label="Sovereign · on-prem UAE">
+            <option value="gemma3:4b">Turbo · Gemma 3 4B</option>
+            <option value="qwen2.5:7b" selected>Balanced · Qwen2.5 7B</option>
+            <option value="qwen2.5:14b">Deep · Qwen2.5 14B</option>
+          </optgroup>
+          <optgroup label="Cloud · Anthropic">
+            <option value="claude-3-5-sonnet-20241022">Claude 3.5 Sonnet</option>
+          </optgroup>
+        </select>
+        <span id="aiContextLabel" class="ai-context">No selection yet</span>
+      </div>
+      <div id="aiThinking" class="ai-thinking hidden">
+        <div class="scanner"></div>
+        <div id="aiThinkingText">Routing to on-premise UAE node…</div>
+      </div>
+      <article id="aiOutput" class="ai-output"></article>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>
+      <strong>QalamData</strong> — Sovereign UAE Property Intelligence ·
+      Data: Dubai Land Department (Dubai Pulse) &amp; Abu Dhabi open data (Bayanat.ae) ·
+      AI: on-premise Ollama (UAE) with deterministic fallback
+    </div>
+    <div class="muted">Built by Al Qalam AI Solutions for the Hub71 Abu Dhabi AI PropTech Challenge · 2026</div>
+    <div class="brand-links">
+      <a href="https://alqalamai.ae" target="_blank" rel="noopener" title="alqalamai.ae">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.2" stroke="currentColor" stroke-width="1.6"/><path d="M3 12h18M12 2.8c2.6 2.4 4 5.8 4 9.2s-1.4 6.8-4 9.2c-2.6-2.4-4-5.8-4-9.2S9.4 5.2 12 2.8Z" stroke="currentColor" stroke-width="1.6"/></svg>
+        alqalamai.ae
+      </a>
+      <span class="sep">·</span>
+      <a href="https://instagram.com/alqalamai" target="_blank" rel="noopener" title="@alqalamai on Instagram">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.6"/><circle cx="17.4" cy="6.6" r="1.2" fill="currentColor"/></svg>
+        @alqalamai
+      </a>
+      <span class="sep">·</span>
+      <a href="mailto:hello@alqalamai.ae" title="hello@alqalamai.ae">hello@alqalamai.ae</a>
+    </div>
+  </footer>
+
+  <!-- Settings modal -->
+  <div id="settingsModal" class="modal hidden" role="dialog" aria-modal="true">
+    <div class="modal-box">
+      <h3>Settings</h3>
+      <label>Sovereign AI endpoint
+        <input id="endpointInput" class="input" type="text" placeholder="https://your-tunnel.trycloudflare.com or http://127.0.0.1:8077" />
+      </label>
+      <p class="muted small">Point this at the on-premise AI node (local or via secure tunnel). If unreachable, QalamData uses a built-in on-device fallback analyst so the demo never breaks.</p>
+      <div class="modal-actions">
+        <button id="saveSettings" class="btn btn-primary">Save</button>
+        <button id="closeSettings" class="btn">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

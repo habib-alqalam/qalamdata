@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+.env
+.DS_Store
+Thumbs.db
+
+# secrets / local-only
+ANTHROPIC_API_KEY.ENV
+*.ENV
+*.env
+anthropic api key.env/
+New Text Document.txt
+gitignore/

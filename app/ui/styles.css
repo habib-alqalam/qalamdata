@@ -1,0 +1,65 @@
+:root {
+  --bg: #f6f4ed;
+  --ink: #1d2428;
+  --accent: #005f73;
+  --card: #ffffff;
+  --border: #d9d3c3;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: radial-gradient(circle at top right, #dceef1, var(--bg));
+  color: var(--ink);
+}
+
+.page {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 20px;
+  display: grid;
+  gap: 16px;
+}
+
+.hero, .panel {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 16px;
+}
+
+h1, h2 {
+  margin-top: 0;
+}
+
+label {
+  display: grid;
+  gap: 6px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+input, button {
+  font: inherit;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #b8c0c2;
+}
+
+button {
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+}
+
+pre {
+  background: #f2f7f8;
+  border: 1px solid #c7dbdf;
+  border-radius: 8px;
+  padding: 12px;
+  overflow: auto;
+}

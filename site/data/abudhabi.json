@@ -1,0 +1,74 @@
+{
+  "emirate": "Abu Dhabi",
+  "source": "Bayanat.ae / Abu Dhabi open data",
+  "data_status": "preview",
+  "note": "Representative open-data model for Abu Dhabi communities. Live Bayanat.ae parcel ingestion is the next integration step; structure mirrors the live Dubai engine.",
+  "generated_at": "2026-06-26T00:00:00.000Z",
+  "totals": {
+    "land_parcels": 152230,
+    "buildings": 138400,
+    "building_summaries": 161900,
+    "areas": 18
+  },
+  "market": {
+    "freehold_pct": 41.6,
+    "registered_pct": 95.4,
+    "top_property_types": [
+      { "name": "Residential", "count": 78140 },
+      { "name": "Commercial", "count": 28960 },
+      { "name": "Villa", "count": 21450 },
+      { "name": "Mixed Use", "count": 9870 },
+      { "name": "Industrial", "count": 7320 },
+      { "name": "Government", "count": 6490 }
+    ],
+    "top_land_types": [
+      { "name": "Residential", "count": 99820 },
+      { "name": "Commercial", "count": 24110 },
+      { "name": "Industrial", "count": 12760 },
+      { "name": "Public Facilities", "count": 9540 },
+      { "name": "Government Authorities", "count": 6000 }
+    ],
+    "building_ownership_types": [
+      { "name": "Citizen / Granted", "count": 71200 },
+      { "name": "Private (Freehold)", "count": 52800 },
+      { "name": "Investment Zone", "count": 23400 },
+      { "name": "Government", "count": 8200 },
+      { "name": "Rented", "count": 6300 }
+    ],
+    "building_status": [
+      { "name": "Completed", "count": 121400 },
+      { "name": "Under Construction", "count": 12600 },
+      { "name": "Permitted", "count": 4400 }
+    ]
+  },
+  "areas": [
+    { "area_id": "AD-MBZ", "name_en": "Mohammed Bin Zayed City", "name_ar": "مدينة محمد بن زايد", "parcels": 22610, "buildings": 21840, "freehold_pct": 14.2, "registered_pct": 97.1, "avg_parcel_area_sqm": 743, "avg_built_up_area_sqm": 612, "total_flats": 41200, "top_property_types": [ { "name": "Residential", "count": 15120 }, { "name": "Villa", "count": 5180 }, { "name": "Commercial", "count": 2310 } ], "top_projects": [ { "name": "MBZ Community Housing", "count": 6400 } ] },
+    { "area_id": "AD-KHC", "name_en": "Khalifa City", "name_ar": "مدينة خليفة", "parcels": 18420, "buildings": 17260, "freehold_pct": 17.8, "registered_pct": 96.7, "avg_parcel_area_sqm": 901, "avg_built_up_area_sqm": 658, "total_flats": 22600, "top_property_types": [ { "name": "Villa", "count": 9120 }, { "name": "Residential", "count": 6840 }, { "name": "Commercial", "count": 1660 } ], "top_projects": [ { "name": "Khalifa City A", "count": 5200 } ] },
+    { "area_id": "AD-SHK", "name_en": "Al Shamkha", "name_ar": "الشامخة", "parcels": 15870, "buildings": 13980, "freehold_pct": 9.4, "registered_pct": 95.9, "avg_parcel_area_sqm": 812, "avg_built_up_area_sqm": 564, "total_flats": 9800, "top_property_types": [ { "name": "Villa", "count": 8910 }, { "name": "Residential", "count": 5120 }, { "name": "Commercial", "count": 980 } ], "top_projects": [ { "name": "Madinat Al Riyadh", "count": 3400 } ] },
+    { "area_id": "AD-BAN", "name_en": "Baniyas", "name_ar": "بني ياس", "parcels": 14210, "buildings": 13110, "freehold_pct": 8.1, "registered_pct": 96.2, "avg_parcel_area_sqm": 698, "avg_built_up_area_sqm": 521, "total_flats": 12400, "top_property_types": [ { "name": "Residential", "count": 9320 }, { "name": "Villa", "count": 3210 }, { "name": "Commercial", "count": 1180 } ], "top_projects": [ { "name": "Bawabat Al Sharq", "count": 1900 } ] },
+    { "area_id": "AD-WAT", "name_en": "Al Wathba", "name_ar": "الوثبة", "parcels": 12940, "buildings": 9870, "freehold_pct": 11.6, "registered_pct": 94.3, "avg_parcel_area_sqm": 1024, "avg_built_up_area_sqm": 588, "total_flats": 5200, "top_property_types": [ { "name": "Villa", "count": 7240 }, { "name": "Residential", "count": 3980 }, { "name": "Industrial", "count": 1110 } ], "top_projects": [ { "name": "Al Wathba South", "count": 2600 } ] },
+    { "area_id": "AD-MUS", "name_en": "Mussafah", "name_ar": "مصفح", "parcels": 11230, "buildings": 10410, "freehold_pct": 22.3, "registered_pct": 95.1, "avg_parcel_area_sqm": 1340, "avg_built_up_area_sqm": 1180, "total_flats": 18600, "top_property_types": [ { "name": "Industrial", "count": 5210 }, { "name": "Commercial", "count": 3460 }, { "name": "Residential", "count": 2120 } ], "top_projects": [ { "name": "Mussafah Industrial", "count": 4200 } ] },
+    { "area_id": "AD-REM", "name_en": "Al Reem Island", "name_ar": "جزيرة الريم", "parcels": 9240, "buildings": 7180, "freehold_pct": 88.5, "registered_pct": 98.2, "avg_parcel_area_sqm": 486, "avg_built_up_area_sqm": 1420, "total_flats": 64200, "top_property_types": [ { "name": "Residential", "count": 6120 }, { "name": "Mixed Use", "count": 2080 }, { "name": "Commercial", "count": 1040 } ], "top_projects": [ { "name": "Shams Abu Dhabi", "count": 2400 }, { "name": "Najmat Abu Dhabi", "count": 1800 } ] },
+    { "area_id": "AD-FAL", "name_en": "Al Falah", "name_ar": "الفلاح", "parcels": 6720, "buildings": 6210, "freehold_pct": 7.2, "registered_pct": 96.8, "avg_parcel_area_sqm": 786, "avg_built_up_area_sqm": 540, "total_flats": 4100, "top_property_types": [ { "name": "Villa", "count": 4820 }, { "name": "Residential", "count": 1610 }, { "name": "Commercial", "count": 290 } ], "top_projects": [ { "name": "Al Falah Community", "count": 3600 } ] },
+    { "area_id": "AD-REF", "name_en": "Al Reef", "name_ar": "الريف", "parcels": 6360, "buildings": 6020, "freehold_pct": 79.4, "registered_pct": 97.6, "avg_parcel_area_sqm": 372, "avg_built_up_area_sqm": 312, "total_flats": 8200, "top_property_types": [ { "name": "Villa", "count": 3940 }, { "name": "Residential", "count": 2010 }, { "name": "Commercial", "count": 410 } ], "top_projects": [ { "name": "Al Reef Villas", "count": 2600 }, { "name": "Al Reef Downtown", "count": 1400 } ] },
+    { "area_id": "AD-MDZ", "name_en": "Madinat Zayed (Western Region)", "name_ar": "مدينة زايد", "parcels": 5410, "buildings": 4980, "freehold_pct": 6.5, "registered_pct": 93.8, "avg_parcel_area_sqm": 1120, "avg_built_up_area_sqm": 640, "total_flats": 3100, "top_property_types": [ { "name": "Residential", "count": 3620 }, { "name": "Villa", "count": 1240 }, { "name": "Government", "count": 320 } ], "top_projects": [ { "name": "Western Region Housing", "count": 1800 } ] },
+    { "area_id": "AD-SAA", "name_en": "Saadiyat Island", "name_ar": "جزيرة السعديات", "parcels": 5320, "buildings": 3140, "freehold_pct": 91.2, "registered_pct": 98.6, "avg_parcel_area_sqm": 640, "avg_built_up_area_sqm": 980, "total_flats": 14800, "top_property_types": [ { "name": "Residential", "count": 3210 }, { "name": "Villa", "count": 1410 }, { "name": "Mixed Use", "count": 480 } ], "top_projects": [ { "name": "Saadiyat Cultural District", "count": 1200 }, { "name": "Saadiyat Beach", "count": 980 } ] },
+    { "area_id": "AD-YAS", "name_en": "Yas Island", "name_ar": "جزيرة ياس", "parcels": 7150, "buildings": 4620, "freehold_pct": 86.7, "registered_pct": 98.1, "avg_parcel_area_sqm": 520, "avg_built_up_area_sqm": 760, "total_flats": 19600, "top_property_types": [ { "name": "Residential", "count": 4520 }, { "name": "Mixed Use", "count": 1560 }, { "name": "Commercial", "count": 720 } ], "top_projects": [ { "name": "Yas Acres", "count": 1600 }, { "name": "West Yas", "count": 1200 } ] },
+    { "area_id": "AD-RAH", "name_en": "Al Raha Beach", "name_ar": "شاطئ الراحة", "parcels": 4180, "buildings": 2960, "freehold_pct": 84.3, "registered_pct": 97.9, "avg_parcel_area_sqm": 410, "avg_built_up_area_sqm": 1120, "total_flats": 22400, "top_property_types": [ { "name": "Residential", "count": 2640 }, { "name": "Mixed Use", "count": 980 }, { "name": "Commercial", "count": 360 } ], "top_projects": [ { "name": "Al Bandar", "count": 720 }, { "name": "Al Zeina", "count": 640 } ] },
+    { "area_id": "AD-MUR", "name_en": "Al Mushrif", "name_ar": "المشرف", "parcels": 3960, "buildings": 3680, "freehold_pct": 19.8, "registered_pct": 96.4, "avg_parcel_area_sqm": 880, "avg_built_up_area_sqm": 690, "total_flats": 6800, "top_property_types": [ { "name": "Villa", "count": 2310 }, { "name": "Residential", "count": 1280 }, { "name": "Commercial", "count": 370 } ], "top_projects": [ { "name": "Mushrif Gardens", "count": 540 } ] },
+    { "area_id": "AD-GHA", "name_en": "Al Ghadeer", "name_ar": "الغدير", "parcels": 3120, "buildings": 2740, "freehold_pct": 76.1, "registered_pct": 97.2, "avg_parcel_area_sqm": 268, "avg_built_up_area_sqm": 240, "total_flats": 5400, "top_property_types": [ { "name": "Residential", "count": 1840 }, { "name": "Villa", "count": 980 }, { "name": "Commercial", "count": 300 } ], "top_projects": [ { "name": "Al Ghadeer Phase", "count": 1600 } ] },
+    { "area_id": "AD-BAT", "name_en": "Al Bateen", "name_ar": "البطين", "parcels": 2870, "buildings": 2610, "freehold_pct": 28.4, "registered_pct": 96.9, "avg_parcel_area_sqm": 1240, "avg_built_up_area_sqm": 940, "total_flats": 7200, "top_property_types": [ { "name": "Villa", "count": 1620 }, { "name": "Residential", "count": 940 }, { "name": "Commercial", "count": 310 } ], "top_projects": [ { "name": "Bateen Marina", "count": 280 } ] },
+    { "area_id": "AD-MAS", "name_en": "Masdar City", "name_ar": "مدينة مصدر", "parcels": 1980, "buildings": 1240, "freehold_pct": 72.6, "registered_pct": 98.4, "avg_parcel_area_sqm": 340, "avg_built_up_area_sqm": 1080, "total_flats": 4800, "top_property_types": [ { "name": "Mixed Use", "count": 940 }, { "name": "Residential", "count": 720 }, { "name": "Commercial", "count": 320 } ], "top_projects": [ { "name": "Masdar Green City", "count": 800 } ] },
+    { "area_id": "AD-MAR", "name_en": "Al Maryah Island", "name_ar": "جزيرة المارية", "parcels": 640, "buildings": 280, "freehold_pct": 94.8, "registered_pct": 99.1, "avg_parcel_area_sqm": 720, "avg_built_up_area_sqm": 2240, "total_flats": 6200, "top_property_types": [ { "name": "Mixed Use", "count": 360 }, { "name": "Commercial", "count": 180 }, { "name": "Residential", "count": 100 } ], "top_projects": [ { "name": "Al Maryah Central", "count": 120 } ] }
+  ],
+  "sample_parcels": [
+    { "parcel_id": "AD-REM-014872", "area_id": "AD-REM", "area_name_en": "Al Reem Island", "property_type_en": "Residential", "property_sub_type_en": "Apartment Tower Plot", "land_type_en": "Residential", "actual_area": "1840.00", "is_free_hold": 1, "is_registered": "1.00", "project_name_en": "Shams Abu Dhabi", "master_project_en": "Al Reem Island" },
+    { "parcel_id": "AD-YAS-008153", "area_id": "AD-YAS", "area_name_en": "Yas Island", "property_type_en": "Residential", "property_sub_type_en": "Villa Plot", "land_type_en": "Residential", "actual_area": "612.00", "is_free_hold": 1, "is_registered": "1.00", "project_name_en": "Yas Acres", "master_project_en": "Yas Island" },
+    { "parcel_id": "AD-SAA-002390", "area_id": "AD-SAA", "area_name_en": "Saadiyat Island", "property_type_en": "Villa", "property_sub_type_en": "Beachfront Villa", "land_type_en": "Residential", "actual_area": "980.00", "is_free_hold": 1, "is_registered": "1.00", "project_name_en": "Saadiyat Beach", "master_project_en": "Saadiyat Island" },
+    { "parcel_id": "AD-KHC-103442", "area_id": "AD-KHC", "area_name_en": "Khalifa City", "property_type_en": "Villa", "property_sub_type_en": "Private Villa", "land_type_en": "Residential", "actual_area": "901.00", "is_free_hold": 0, "is_registered": "1.00", "project_name_en": "Khalifa City A", "master_project_en": "Khalifa City" },
+    { "parcel_id": "AD-MBZ-220914", "area_id": "AD-MBZ", "area_name_en": "Mohammed Bin Zayed City", "property_type_en": "Residential", "property_sub_type_en": "Granted Residential", "land_type_en": "Residential", "actual_area": "743.00", "is_free_hold": 0, "is_registered": "1.00", "project_name_en": "MBZ Community Housing", "master_project_en": "Mohammed Bin Zayed City" },
+    { "parcel_id": "AD-MUS-051120", "area_id": "AD-MUS", "area_name_en": "Mussafah", "property_type_en": "Industrial", "property_sub_type_en": "Warehouse Plot", "land_type_en": "Industrial", "actual_area": "1340.00", "is_free_hold": 1, "is_registered": "1.00", "project_name_en": "Mussafah Industrial", "master_project_en": "Mussafah" },
+    { "parcel_id": "AD-REF-006621", "area_id": "AD-REF", "area_name_en": "Al Reef", "property_type_en": "Villa", "property_sub_type_en": "Townhouse", "land_type_en": "Residential", "actual_area": "372.00", "is_free_hold": 1, "is_registered": "1.00", "project_name_en": "Al Reef Villas", "master_project_en": "Al Reef" },
+    { "parcel_id": "AD-MAR-000118", "area_id": "AD-MAR", "area_name_en": "Al Maryah Island", "property_type_en": "Mixed Use", "property_sub_type_en": "Commercial Tower Plot", "land_type_en": "Commercial", "actual_area": "2240.00", "is_free_hold": 1, "is_registered": "1.00", "project_name_en": "Al Maryah Central", "master_project_en": "Al Maryah Island" }
+  ]
+}

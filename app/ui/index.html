@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hub71 AI PropTech Demo · Al Qalam AI Solutions</title>
+    <link rel="icon" type="image/png" href="assets/logo-mark.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="brand.css" /><!-- Al Qalam AI branding layer -->
+    <meta name="theme-color" content="#0B3D2E" />
+  </head>
+  <body>
+    <header class="brand-bar">
+      <img class="brand-logo" src="assets/logo-horizontal.png" alt="Al Qalam AI Solutions" />
+      <span class="brand-chip">Hub71 · AI PropTech</span>
+    </header>
+    <main class="page">
+      <section class="hero">
+        <h1>AI PropTech Parcel Intelligence</h1>
+        <p>Self-guided demo for judges: analyze a parcel and get an explainable recommendation instantly.</p>
+      </section>
+
+      <section class="panel">
+        <h2>API Settings</h2>
+        <label>API Base URL <input id="apiBase" value="http://127.0.0.1:8000" /></label>
+        <button id="checkHealth">Check Health</button>
+        <pre id="healthOut"></pre>
+      </section>
+
+      <section class="panel">
+        <h2>Analyze Parcel</h2>
+        <form id="analyzeForm">
+          <label>Parcel ID <input id="parcel_id" value="9140347" required /></label>
+          <label>Registered <input id="is_registered" type="checkbox" checked /></label>
+          <label>Free Hold <input id="is_free_hold" type="checkbox" /></label>
+          <label>Building Density (0-1) <input id="building_density" type="number" min="0" max="1" step="0.01" value="0.64" required /></label>
+          <label>Transit Access (0-1) <input id="transit_access_score" type="number" min="0" max="1" step="0.01" value="0.72" required /></label>
+          <label>Demand Index (0-1) <input id="estimated_demand_index" type="number" min="0" max="1" step="0.01" value="0.81" required /></label>
+          <button type="submit">Analyze</button>
+        </form>
+        <pre id="analyzeOut"></pre>
+      </section>
+    </main>
+
+    <footer class="brand-foot">
+      <span>Built by <strong>Al Qalam AI Solutions</strong> · Precision-Driven AI for the UAE</span>
+      <span class="links">
+        <a href="https://alqalamai.ae" target="_blank" rel="noopener">alqalamai.ae</a> ·
+        <a href="https://instagram.com/alqalamai" target="_blank" rel="noopener">@alqalamai</a>
+      </span>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>

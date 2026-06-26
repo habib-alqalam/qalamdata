@@ -1,0 +1,81 @@
+/* ============================================================
+   AL QALAM AI SOLUTIONS — brand layer for QalamData.
+   Loaded AFTER styles.css; overrides only brand-affecting tokens
+   (no structural CSS rewritten) so it never collides with ongoing
+   layout work. Official identity from alqalamai.ae:
+     Emerald #0B3D2E · Gold #C9A961 · Instagram @alqalamai
+   ============================================================ */
+
+:root {
+  /* Official brand accents (override the placeholder gold/teal) */
+  --gold:       #C9A961;   /* aq-gold       */
+  --gold-deep:  #A88840;   /* aq-gold-deep  */
+  --teal:       #4A9078;   /* aq-emerald-400 — accent re-pointed to emerald */
+  --teal-deep:  #2A7459;   /* aq-emerald-500 */
+  --green:      #46C28A;   /* live/success, harmonised with emerald */
+
+  /* Emerald-tinted "sovereign" dark surfaces */
+  --bg:        #06120D;
+  --bg-2:      #0A1A14;
+  --panel:     #0E2219;
+  --panel-2:   #123026;
+  --border:    #203F31;
+
+  /* Brand helpers */
+  --aq-emerald: #0B3D2E;
+  --aq-tile:    #FAF7EF;   /* cream tile behind the geometric mark */
+}
+
+/* Emerald + gold ambient wash (was teal/gold) */
+body {
+  background:
+    radial-gradient(1200px 600px at 80% -10%, rgba(42,116,89,.16), transparent),
+    radial-gradient(900px 500px at 0% 0%, rgba(201,169,97,.10), transparent),
+    var(--bg);
+}
+
+/* Sticky header: emerald glass + subtle gold hairline */
+.topbar {
+  background: rgba(6,18,13,.74);
+  border-bottom: 1px solid rgba(201,169,97,.32);
+}
+
+/* ---- Real Al Qalam mark in place of the placeholder star ---- */
+.brand .logo {
+  width: 42px;
+  height: 42px;
+  border-radius: 11px;
+  background: var(--aq-tile) url("assets/logo-mark.png") center / 28px 28px no-repeat;
+  box-shadow: 0 2px 8px rgba(0,0,0,.28), inset 0 0 0 1px rgba(201,169,97,.35);
+}
+.brand .logo svg { display: none; }
+.brandtext strong { letter-spacing: .2px; }
+.brandtext span { color: var(--gold); opacity: .92; }
+
+/* Keep the active emirate tab on official gold */
+.em-btn.active {
+  border-color: var(--gold);
+  background: linear-gradient(180deg, rgba(201,169,97,.16), rgba(201,169,97,.04));
+}
+.tag-preview { background: rgba(201,169,97,.14); color: var(--gold); border-color: rgba(201,169,97,.4); }
+
+/* ---- Footer brand block ---- */
+.footer .brand-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 18px;
+  margin-top: 12px;
+}
+.footer .brand-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--gold);
+  font-weight: 600;
+  font-size: 13px;
+  text-decoration: none;
+}
+.footer .brand-links a:hover { color: var(--gold-deep); }
+.footer .brand-links svg { width: 15px; height: 15px; }
+.footer .brand-links .sep { color: var(--border); }

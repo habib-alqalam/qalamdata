@@ -1,0 +1,95 @@
+name: Hub71 Submission
+about: Submit the Hub71 Abu Dhabi AI PropTech challenge entry
+title: "[Hub71 Submission] Team - Project"
+labels: ["submission", "hub71", "hackathon"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Complete all required fields before 16:30.
+
+  - type: input
+    id: repository_link
+    attributes:
+      label: Repository Link
+      description: Public repository URL
+      placeholder: https://github.com/org/hub71-hackathon-project
+    validations:
+      required: true
+
+  - type: input
+    id: live_app_link
+    attributes:
+      label: Live Deployed App Link
+      description: Public app URL judges can open directly
+      placeholder: https://your-app-domain.example.com
+    validations:
+      required: true
+
+  - type: input
+    id: video_link
+    attributes:
+      label: Video Walkthrough (1 to 3 minutes)
+      description: Public video URL
+      placeholder: https://www.youtube.com/watch?v=...
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem_definition
+    attributes:
+      label: Problem Definition
+      description: What problem is solved and why it matters
+      placeholder: Describe pain point, stakeholders, and urgency.
+    validations:
+      required: true
+
+  - type: textarea
+    id: ai_usage
+    attributes:
+      label: AI Usage
+      description: Where and how AI is used in your solution
+      placeholder: Explain model, scoring, automation, or decision support.
+    validations:
+      required: true
+
+  - type: textarea
+    id: execution_quality
+    attributes:
+      label: Execution Quality
+      description: Architecture, reliability, scalability, and UX quality
+      placeholder: Summarize engineering quality and trade-offs.
+    validations:
+      required: true
+
+  - type: textarea
+    id: demo_clarity
+    attributes:
+      label: Demo Clarity
+      description: How judges should evaluate the app quickly
+      placeholder: Include expected clicks and key outcomes.
+    validations:
+      required: true
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact
+      description: Expected business, social, or ecosystem impact
+      placeholder: Quantify value and expected adoption.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: final_checks
+    attributes:
+      label: Final Submission Checks
+      options:
+        - label: Repository link is public and accessible
+          required: true
+        - label: Live deployed app is reachable and self-explanatory
+          required: true
+        - label: Video walkthrough is between 1 and 3 minutes
+          required: true
+        - label: Submission completed before 16:30
+          required: true
