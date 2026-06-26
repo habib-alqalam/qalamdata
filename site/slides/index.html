@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QalamData — Walkthrough · Sovereign UAE Property Intelligence</title>
+  <meta name="description" content="QalamData walkthrough deck — Sovereign UAE Property Intelligence for the Hub71 Abu Dhabi AI PropTech Challenge. Real Dubai Land Department data, analysed by on-premise AI." />
+  <link rel="icon" type="image/png" href="../assets/logo-mark.png" />
+  <meta name="theme-color" content="#0B3D2E" />
+  <style>
+    :root{
+      --bg:#06140f; --green:#0B3D2E; --green2:#0a2a20; --panel:#0e2a20;
+      --gold:#E7C66B; --gold2:#C9A227; --teal:#23c4b2; --ink:#eaf3ef; --muted:#9fc0b3; --border:#1d4636;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;scroll-behavior:smooth}
+    body{
+      font-family:"Segoe UI",system-ui,-apple-system,Tahoma,sans-serif;color:var(--ink);
+      background:radial-gradient(1100px 600px at 85% -10%,rgba(35,196,178,.12),transparent),
+                 radial-gradient(900px 500px at 0% 0%,rgba(231,198,107,.10),transparent),var(--bg);
+    }
+    a{color:var(--teal)}
+    .bar{position:fixed;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;
+      padding:12px 22px;background:rgba(6,20,15,.72);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);z-index:20}
+    .bar .b{display:flex;align-items:center;gap:11px}
+    .bar img{width:30px;height:30px}
+    .bar strong{font-size:16px;letter-spacing:.3px}
+    .bar .links{display:flex;gap:10px}
+    .bar .links a{font-size:12.5px;font-weight:700;text-decoration:none;color:var(--ink);
+      border:1px solid var(--border);padding:7px 12px;border-radius:9px;background:var(--panel)}
+    .bar .links a.primary{background:linear-gradient(90deg,var(--gold2),var(--gold));color:#1b1405;border:none}
+    main{scroll-snap-type:y proximity}
+    .slide{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;
+      text-align:center;padding:96px 22px 60px;scroll-snap-align:start;position:relative}
+    .wrap{max-width:1000px;width:100%}
+    .kicker{color:var(--gold);font-weight:800;font-size:13px;letter-spacing:.5px;margin-bottom:14px}
+    h1{font-size:clamp(30px,5vw,54px);line-height:1.1;margin:0 0 16px;font-weight:850}
+    h1 .accent{background:linear-gradient(90deg,var(--gold),var(--teal));-webkit-background-clip:text;background-clip:text;color:transparent}
+    h2{font-size:clamp(22px,3.4vw,34px);margin:0 0 14px;font-weight:800}
+    p.lede{font-size:clamp(16px,2vw,19px);color:#cfe4db;max-width:760px;margin:0 auto 22px}
+    .links-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:8px}
+    .btn{display:inline-block;text-decoration:none;font-weight:800;padding:13px 20px;border-radius:12px;
+      border:1px solid var(--border);color:var(--ink);background:var(--panel)}
+    .btn.primary{background:linear-gradient(90deg,var(--gold2),var(--gold));color:#1b1405;border:none}
+    .logo-xl{width:74px;height:74px;margin-bottom:18px}
+    .demo{width:min(960px,94vw);border-radius:16px;border:1px solid var(--border);box-shadow:0 20px 60px rgba(0,0,0,.5);background:#000}
+    .cap{color:var(--muted);font-size:13.5px;margin-top:14px}
+    .stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:26px}
+    @media(max-width:760px){.stat-grid{grid-template-columns:repeat(2,1fr)}}
+    .stat{background:linear-gradient(180deg,var(--panel),var(--green2));border:1px solid var(--border);border-radius:14px;padding:18px}
+    .stat .v{font-size:clamp(22px,3vw,32px);font-weight:850;color:var(--gold)}
+    .stat .v.teal{color:var(--teal)}
+    .stat .l{font-size:12.5px;color:var(--muted);margin-top:6px}
+    .badges{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+    .pill{display:inline-flex;align-items:center;gap:8px;padding:9px 15px;border-radius:999px;font-weight:700;font-size:14px}
+    .pill.sov{background:rgba(35,196,178,.14);color:var(--teal);border:1px solid rgba(35,196,178,.4)}
+    .pill.cloud{background:rgba(120,150,255,.14);color:#9db3ff;border:1px solid rgba(120,150,255,.4)}
+    .pill.fb{background:rgba(231,198,107,.14);color:var(--gold);border:1px solid rgba(231,198,107,.4)}
+    .flow{display:flex;flex-direction:column;gap:10px;max-width:680px;margin:22px auto 0;text-align:left}
+    .flow .step{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:14px 16px;font-size:15px}
+    .flow .step b{color:var(--gold)}
+    .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px;text-align:left;margin-top:20px}
+    @media(max-width:760px){.grid2{grid-template-columns:1fr}}
+    .card{background:linear-gradient(180deg,var(--panel),var(--green2));border:1px solid var(--border);border-radius:14px;padding:18px}
+    .card h3{margin:0 0 8px;color:var(--gold);font-size:16px}
+    .card p{margin:0;color:#cfe4db;font-size:14.5px}
+    .scrollhint{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);color:var(--muted);font-size:12.5px;letter-spacing:.4px}
+    .foot{color:var(--muted);font-size:13px;margin-top:24px}
+  </style>
+</head>
+<body>
+  <header class="bar">
+    <div class="b"><img src="../assets/logo-mark.png" alt="Al Qalam" /><strong>QalamData</strong></div>
+    <div class="links">
+      <a class="primary" href="../" >Open live app</a>
+      <a href="https://github.com/habib-alqalam/qalamdata" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- 1. Title -->
+    <section class="slide">
+      <div class="wrap">
+        <img class="logo-xl" src="../assets/logo-mark.png" alt="Al Qalam AI Solutions" />
+        <div class="kicker">🇦🇪 HUB71 ABU DHABI · AI PROPTECH CHALLENGE 2026</div>
+        <h1>QalamData<br /><span class="accent">Sovereign UAE Property Intelligence</span></h1>
+        <p class="lede">Understand any UAE property in seconds — with AI that never leaves UAE soil.</p>
+        <div class="links-row">
+          <a class="btn primary" href="../">Open the live app</a>
+          <a class="btn" href="https://github.com/habib-alqalam/qalamdata" target="_blank" rel="noopener">View the code</a>
+        </div>
+        <div class="foot">by Al Qalam AI Solutions</div>
+      </div>
+      <div class="scrollhint">scroll for the 90-second walkthrough ↓</div>
+    </section>
+
+    <!-- 2. Video -->
+    <section class="slide">
+      <div class="wrap">
+        <div class="kicker">90-SECOND WALKTHROUGH</div>
+        <video class="demo" controls autoplay muted loop playsinline preload="auto">
+          <source src="qalamdata-demo.mp4" type="video/mp4" />
+          <source src="qalamdata-demo.webm" type="video/webm" />
+          Your browser cannot play the video — <a href="qalamdata-demo.mp4">download it here</a>.
+        </video>
+        <div class="cap">Live recording: real Dubai Land Department data → on-premise AI analysis in ~8 seconds.</div>
+      </div>
+    </section>
+
+    <!-- 3. Problem -->
+    <section class="slide">
+      <div class="wrap">
+        <div class="kicker">THE PROBLEM</div>
+        <h2>UAE property due-diligence is slow, fragmented, and cloud-dependent</h2>
+        <p class="lede">Official land, building and registration data exists as huge open-data exports that nobody reads in real time. Investors, brokers and planners need an instant, plain-English read on any parcel — without shipping sensitive property data to a foreign cloud.</p>
+      </div>
+    </section>
+
+    <!-- 4. Sovereignty -->
+    <section class="slide">
+      <div class="wrap">
+        <div class="kicker">THE DIFFERENTIATOR · DATA SOVEREIGNTY</div>
+        <h2>The AI runs on-premise, on a machine in the UAE</h2>
+        <p class="lede">Property data is never sent to a foreign cloud. A live badge shows exactly which engine produced each analysis — and our default keeps inference on UAE soil.</p>
+        <div class="badges">
+          <span class="pill sov">🔒 Sovereign default · on-prem Ollama</span>
+          <span class="pill cloud">☁️ Optional · Anthropic Claude</span>
+          <span class="pill fb">⚡ Always-on · in-browser fallback</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Data -->
+    <section class="slide">
+      <div class="wrap">
+        <div class="kicker">REAL DATA — NOT A MOCKUP</div>
+        <h2>1,036,474 official records, analysed instantly</h2>
+        <p class="lede">Sourced from the Dubai Land Department (Dubai Pulse open data), aggregated locally into a 289&nbsp;KB intelligence file — no database, instant load. Abu Dhabi (Bayanat.ae) ships next, structure-identical.</p>
+        <div class="stat-grid">
+          <div class="stat"><div class="v">259,491</div><div class="l">Land parcels</div></div>
+          <div class="stat"><div class="v">249,816</div><div class="l">Buildings</div></div>
+          <div class="stat"><div class="v">527,167</div><div class="l">Building summaries</div></div>
+          <div class="stat"><div class="v teal">262</div><div class="l">Areas covered</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. How it works -->
+    <section class="slide">
+      <div class="wrap">
+        <div class="kicker">HOW IT WORKS</div>
+        <h2>Static site + on-prem sovereign AI</h2>
+        <div class="flow">
+          <div class="step"><b>1 · Browser</b> — static app on ai.alqalam.ae loads a compact data file (no backend DB).</div>
+          <div class="step"><b>2 · Analyze</b> — request is sent over an HTTPS tunnel to the on-premise AI node in the UAE.</div>
+          <div class="step"><b>3 · Sovereign AI</b> — local Ollama (Qwen/Gemma) interprets the official data; Anthropic is an optional toggle.</div>
+          <div class="step"><b>4 · Resilient</b> — if the node is offline, an in-browser analyst answers, so the demo never breaks.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Impact -->
+    <section class="slide">
+      <div class="wrap">
+        <div class="kicker">IMPACT</div>
+        <h2>Faster, sovereign, explainable decisions</h2>
+        <div class="grid2">
+          <div class="card"><h3>Investors &amp; brokers</h3><p>Instant parcel/area screening with decision-grade signals, risk flags and a clear recommendation.</p></div>
+          <div class="card"><h3>Government &amp; planners</h3><p>Data sovereignty by design — sensitive property data is analysed on UAE soil, never a foreign cloud.</p></div>
+          <div class="card"><h3>Pan-UAE</h3><p>Dubai live today; Abu Dhabi (Bayanat.ae) next — one engine for the whole country.</p></div>
+          <div class="card"><h3>Explainable</h3><p>Every answer cites the official numbers it used, with a badge showing which AI engine produced it.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Close -->
+    <section class="slide">
+      <div class="wrap">
+        <img class="logo-xl" src="../assets/logo-mark.png" alt="Al Qalam AI Solutions" />
+        <h2>Try it now</h2>
+        <p class="lede">Open the live app, pick an area, and click Analyze.</p>
+        <div class="links-row">
+          <a class="btn primary" href="../">ai.alqalam.ae/qalamdata</a>
+          <a class="btn" href="https://github.com/habib-alqalam/qalamdata" target="_blank" rel="noopener">github.com/habib-alqalam/qalamdata</a>
+        </div>
+        <div class="foot">QalamData · Built by Al Qalam AI Solutions for the Hub71 Abu Dhabi AI PropTech Challenge · 2026</div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
