@@ -48,7 +48,7 @@ def _load_anthropic_key():
 
 
 ANTHROPIC_API_KEY = _load_anthropic_key()
-ANTHROPIC_MODEL = os.environ.get("ANTHROPIC_MODEL", "claude-3-5-sonnet-20241022")
+ANTHROPIC_MODEL = os.environ.get("ANTHROPIC_MODEL", "claude-sonnet-4-6")
 
 SYSTEM = (
     "You are QalamData, a senior UAE real-estate analyst working from Dubai Land Department "
